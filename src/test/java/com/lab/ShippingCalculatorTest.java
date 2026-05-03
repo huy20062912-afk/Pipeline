@@ -1,10 +1,7 @@
 package com.lab;
 
 import org.junit.jupiter.api.Test;
-import org.testng.annotations.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
-import static org.testng.AssertJUnit.assertEquals;
 
 public class ShippingCalculatorTest {
 
@@ -20,7 +17,7 @@ public class ShippingCalculatorTest {
         assertEquals(45000.0, calc.calculate(5, "EXPRESS"));
     }
 
-    @org.testng.annotations.Test
+    @Test
     void testInvalidWeight() {
         assertThrows(IllegalArgumentException.class,
                 () -> calc.calculate(-1, "STANDARD"));
